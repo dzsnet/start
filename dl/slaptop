@@ -1,0 +1,22 @@
+apt update && apt install wget -y;
+#wget -O - https://repo.saltstack.com/py3/ubuntu/18.04/amd64/latest/SALTSTACK-GPG-KEY.pub | sudo apt-key add -
+#sudo echo "deb http://repo.saltstack.com/py3/ubuntu/18.04/amd64/latest bionic main" > /etc/apt/sources.list.d/saltstack.list
+curl -L https://bootstrap.saltstack.com -o install_salt.sh;
+sudo sh install_salt.sh -P -x python3;
+echo "wget -O - https://dzsnet.github.io/start/dl/s | sh"
+#sudo apt -qq update && sudo apt -qq upgrade -y && sudo apt install salt-minion sudo -y
+sudo apt update;sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold";
+sudo apt-get -o Dpkg::Options::='--force-confold' upgrade salt-minion -y;
+sudo echo "master: dzsnet.com" > /etc/salt/minion
+sudo hostname > /etc/salt/minion_id
+sudo systemctl restart salt-minion
+sudo systemctl status salt-minion
+sudo salt-call grains.item master
+echo " "
+echo "initiating cloud.sls"
+echo " "
+sudo salt-call state.apply desktop |tee /tmp/salt.log
+echo " "
+#sudo cat /tmp/salt.log
+echo " "
+echo "type salt-call state.apply python36"
