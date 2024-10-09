@@ -27,6 +27,8 @@ choco upgrade all -y --no-progress -r
 #Import-Module PSWindowsUpdate
 echo " "
 salt-call win_wua.list install=True
+USOclient StartInstall
+USOclient StartInteractiveScan
 
 
 #c:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe Get-WUInstall -Acceptall -Verbose -IgnoreReboot -IgnoreRebootRequired
