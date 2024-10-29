@@ -1,7 +1,7 @@
 apt update && apt install wget -y;
 #wget -O - https://repo.saltstack.com/py3/ubuntu/18.04/amd64/latest/SALTSTACK-GPG-KEY.pub | sudo apt-key add -
 #sudo echo "deb http://repo.saltstack.com/py3/ubuntu/18.04/amd64/latest bionic main" > /etc/apt/sources.list.d/saltstack.list
-curl -L https://bootstrap.saltstack.com -o install_salt.sh;
+curl -L https://github.com/saltstack/salt-bootstrap/releases/latest/download/bootstrap-salt.sh -o install_salt.sh;
 sudo sh install_salt.sh -P -x python3;
 echo "wget -O - https://dzsnet.github.io/start/dl/s | sh"
 #sudo apt -qq update && sudo apt -qq upgrade -y && sudo apt install salt-minion sudo -y
