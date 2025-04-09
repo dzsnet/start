@@ -6,7 +6,7 @@ echo "deb [signed-by=/usr/share/keyrings/salt-archive-keyring.gpg arch=armhf] ht
 
 sudo apt update;sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold";
 sudo apt-get -o Dpkg::Options::='--force-confold' upgrade salt-minion -y;
-sudo echo "master: dzsnet.com" > /etc/salt/minion
+sudo echo "master: saltmaster1.dzsnet.com" > /etc/salt/minion
 sudo hostname > /etc/salt/minion_id
 sudo systemctl restart salt-minion
 sudo systemctl status salt-minion
