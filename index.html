@@ -184,9 +184,51 @@
 document.searchform.searchterms.focus();
 </script>
 
-<div>
-  <script language="javascript" src="weather.js"></script>
-</div>
+
+<!-- weather widget--> 
+
+<script>
+        (function(d, s, id) {
+            if (d.getElementById(id)) {
+                if (window.__TOMORROW__) {
+                    window.__TOMORROW__.renderWidget();
+                }
+                return;
+            }
+            const fjs = d.getElementsByTagName(s)[0];
+            const js = d.createElement(s);
+            js.id = id;
+            js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
+
+            fjs.parentNode.insertBefore(js, fjs);
+        })(document, 'script', 'tomorrow-sdk');
+        </script>
+
+        <div class="tomorrow"
+           data-location-id="055779"
+           data-language="EN"
+           data-unit-system="METRIC"
+           data-skin="dark"
+           data-widget-type="upcoming"
+           style="padding-bottom:22px;position:relative;"
+        >
+          <a
+            href="https://weather.tomorrow.io/"
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+            style="position: absolute; bottom: 0; transform: translateX(-50%); left: 50%;"
+          >
+            <img
+              alt="Powered by Tomorrow.io"
+              src="https://weather-website-client.tomorrow.io/img/powered-by.svg"
+              width="250"
+              height="18"
+            />
+          </a>
+        </div>
+
+<!-- weather widget--> 
+
   
 <div style="width: 316px;">
 <a class="weatherwidget-io" href="https://forecast7.com/en/47d9521d72/nyiregyhaza/" data-label_1="" data-font="Roboto" data-mode="Forecast" data-days="7" data-theme="gray" data-basecolor="#2c2f33" ></a>
