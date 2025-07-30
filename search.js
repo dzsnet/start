@@ -3,12 +3,6 @@ function dosearch() {
     var dropdown = document.getElementById('engine-dropdown');
     var searchterms = sf.searchterms.value;
     
-    if (!searchterms) {
-        alert('Please enter search terms!');
-        sf.searchterms.focus();
-        return false;
-    }
-    
     var str = searchterms;
     str = str.replace('&', '%26');
     str = str.replace('?', '%3F');
