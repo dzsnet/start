@@ -83,8 +83,9 @@
         <div class="search-input-container">
             <input type="hidden" name="ie" value="UTF-8" />
             <input type="hidden" name="oe" value="UTF-8" />
-            <input type="text" maxlength="255" name="searchterms" class="textboxstyle2" autofocus/>
+            <input type="text" maxlength="255" name="searchterms" class="textboxstyle2" autofocus autocomplete="off" oninput="handleInput()" onkeydown="handleKeyDown(event)"/>
             <button type="button" class="clear-btn" onclick="clearSearch()">✕</button>
+            <div id="suggestions" class="suggestions-container"></div>
         </div>
         
         <input name="f" type="submit" value="search" class="buttons" />
