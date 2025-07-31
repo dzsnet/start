@@ -207,3 +207,16 @@ document.addEventListener('click', function(event) {
         hideSuggestions();
     }
 });
+
+// Return focus to search input after selecting from engine dropdown
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdown = document.getElementById('engine-dropdown');
+    if (dropdown) {
+        dropdown.addEventListener('change', function() {
+            // Small delay to ensure the change event completes
+            setTimeout(() => {
+                document.searchform.searchterms.focus();
+            }, 10);
+        });
+    }
+});
