@@ -67,7 +67,7 @@ div[align="center"] img:hover {
 /* Dropdown styling */
 .engine-select {
   width: 100%;
-  height: 48px;
+  min-height: 48px;
   max-width: 400px;
   padding: 10px 20px;
   font-size: 14px;
