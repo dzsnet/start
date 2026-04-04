@@ -2,6 +2,7 @@
 <head>
 <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAAAAAAAAAAAAAAAAABFRUUQSEhIc1ZXV71eXl7oYGBg/GBgYPtdXV7kVVVVtUdHR2ZGRkYIAAAAAAAAAAAAAAAAAAAAAAAAAABGRkYcYWJi4nl6ev94eHj/b29v/2lpaf9oaGj/bW1t/3Z2dv93d3f/X19f0EdHRwwAAAAAAAAAAAAAAAAAAAAAcnNzXHx8fP9sbW3/Wltb/0xMTP9DQ0T/Q0RE/01NTf9cXFz/bm5u/35+fv9vb285AAAAAAAAAAAAAAAAAAAAAH5/fyFwcHDqW1tb/0VGRv8xMTH/ISEh/yYmJ/85OTn/Tk5O/2RkZP95eXnagYGBDwAAAAAAAAAAAAAAAAAAAAAAAAAAZmZnF1ZWV4FERETLHBwc9QAAAP8AAAD/Kysr8lJSU8RlZWV0c3R0DQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////AfXz8W3Mysn/2NbU/////3z///8KAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////IP///8b/////////////////////////5////0sAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////EPf18928u7r////////////////////////////////6////PwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGloaZC2ubv/PT4//9fV0////////////////////////////////9L///8BAAAAAAAAAAAAAAAAAAAAAEZERgrBwsX1Ng8A/4+IhP8jIyP/////////////////////////////////////JwAAAAAAAAAAAAAAAAAAAAA4NTgfhYaI//xnBv+VZ0v/Kior/////////////////////////////////////0EAAAAAAAAAAAAAAAAAAAAAFRMVBImIiuUhDgD/fXx7/2NjY/////////////////////////////////////8oAAAAAAAAAAAAAAAAAAAAAAAAAAC4trWJlZWV/2pqav/////////////////////////////////////T////AQAAAAAAAAAAAAAAAAAAAAAAAAAA////Ev/9++b////////////////////////////////////7////QgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACiJCQl/2dnZ//////////////////////u////TgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABhESE3IwMTHRSkpL+nh5eea7u7uVurq6HAAAAAAAAAAAAAAAAAAAAAAAAAAA4AcAAMADAADAAwAAwAMAAOAHAAD4HwAA8A8AAOAHAADgAwAAwAMAAMADAADAAwAA4AMAAOAHAADwDwAA8B8AAA==" rel="icon" type="image/x-icon">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>webcams</title>
 
 <style>
@@ -14,29 +15,28 @@
   font-size: 0.6em;
   font-weight: bold;
   color: #fff;
-
-
-
 }
 
 .row {
   display: flex;
-
+  flex-wrap: wrap;
   padding-top: 0px;
-  padding-right: 00px;
+  padding-right: 0px;
   padding-bottom: 40px;
   padding-left: 0px;
-
 }
 
 .column {
-  flex: 100%;
+  flex: 1 1 400px;
+  min-width: 0;
 }
 
-@media screen and (max-width: 800px) {
-  .column {
-    width: 100%;
-  }
+.column iframe,
+.column video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  display: block;
 }
 
 a {
@@ -53,21 +53,21 @@ a {
 
 <div class="row">
   <div class="column"><h2>Debrecen - Kossuth tér</h2>
-<iframe src="//g0.ipcamlive.com/player/player.php?alias=5a1d2f80f15fb" style="max-width: 100%;" allowfullscreen="" width="800" height="450" frameborder="0"></iframe></div>
+<iframe src="//g0.ipcamlive.com/player/player.php?alias=5a1d2f80f15fb" allowfullscreen="" frameborder="0"></iframe></div>
   <div class="column"><h2>Debrecen - Békás-tó</h2>
-<iframe src="//g0.ipcamlive.com/player/player.php?alias=5a1d2f277c3cb" style="max-width: 100%;" allowfullscreen="" width="800" height="450" frameborder="0"></iframe></div>
+<iframe src="//g0.ipcamlive.com/player/player.php?alias=5a1d2f277c3cb" allowfullscreen="" frameborder="0"></iframe></div>
 </div>
 
 <div class="row">
   <div class="column"><h2>Debrecen - Ködszínház</h2>
-<iframe src="//g0.ipcamlive.com/player/player.php?alias=5b3b5d9a29e15" style="max-width: 100%;" allowfullscreen="" width="800" height="450" frameborder="0"></iframe></div>
+<iframe src="//g0.ipcamlive.com/player/player.php?alias=5b3b5d9a29e15" allowfullscreen="" frameborder="0"></iframe></div>
   <div class="column"><h2>Szentendre</h2>
-<iframe src="//g0.ipcamlive.com/player/player.php?alias=570b5e81b9c8e" style="max-width: 100%;" allowfullscreen="" width="800" height="450" frameborder="0"></iframe></div>
+<iframe src="//g0.ipcamlive.com/player/player.php?alias=570b5e81b9c8e" allowfullscreen="" frameborder="0"></iframe></div>
 </div>
 
 <div class="row">
 <div class="column"><h2>Budapest - Hotel Victoria - idokep.hu</h2>
-<iframe width="800" height="450" src="https://stream.idokep.hu/getlatestwebcamlive.php?nev=hotelvictoria&token=a4f90680699ccc4e5d397dde1f9f0403b793214941dbd06bbc5e3d679a33910e"  style="max-width: 100%;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<iframe src="https://stream.idokep.hu/getlatestwebcamlive.php?nev=hotelvictoria&token=a4f90680699ccc4e5d397dde1f9f0403b793214941dbd06bbc5e3d679a33910e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
   <div class="column"></div>
 </div>
 
